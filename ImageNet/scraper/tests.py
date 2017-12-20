@@ -28,9 +28,6 @@ class scrape():
         download(soup)
 
 
-
-
-
 query = input("Image item: ")
 
 
