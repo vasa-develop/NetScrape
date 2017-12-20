@@ -8,18 +8,43 @@ import os
 import threading
 import requests
 
+global lock
 
-query = "girls"
+def get_image(link):
+	lock = False
+	os.system("wget "+link)
+	lock = True
 
-url = "http://images.google.com/search?q=" + query + "&sout=1&tbm=isch&ei=cpQuWtrOKcnMvgSNtbzICA&start=0&sa=N"
+def download(soup):
+	lock = True
+	for a in soup.findAll('img'):
+		if(lock == True):
+			get_image(a['src'])
 
-response = requests.get(url)
-html = response.content
+class scrape():
+    def __init__(self):
+        threading.Thread.__init__(self)
+    def run(self,soup):
+        download(soup)
 
-soup = BeautifulSoup(html, 'html.parser')
 
-for a in soup.findAll('img'):
-    os.system("wget " + a['src'])
+
+
+
+query = input("Image item: ")
+
+
+for i in range(0, 101, 20):
+    url = "http://images.google.com/search?q=" + query + "&sout=1&tbm=isch&ei=cpQuWtrOKcnMvgSNtbzICA&start=" + str(
+        i) + "&sa=N"
+
+    response = requests.get(url)
+    html = response.content
+
+    soup = BeautifulSoup(html, 'html.parser')
+
+    thread1 = scrape()
+    thread1.run(soup)
 
 #thread.start_new_thread(download, (soup,));
 
