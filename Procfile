@@ -1,1 +1,1 @@
-web: gunicorn scraper
+web: gunicorn ImageNet
