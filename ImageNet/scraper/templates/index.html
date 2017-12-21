@@ -1,10 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+  <head profile="http://image-net.herokuapp.com/img/small_logo.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NetScrape, Home of scraped net. Find licence free images for machine learning, memes ,posters. Make your own customized database for machine learning in munutes.">
+    <meta name="author" content="vasa">
+    <meta property="og:title" content="NetScrape" />
+    <meta property="og:description" content="Home to free images for machine learning. Make your own customized database within minutes." />
+    <meta property="og:image" content="img/main_small_logo.png" />
+    <meta property="og:site_name" content="NetScrape" />
+    <title>NetScrape</title>
+    <link rel="icon"
+      type="image/png"
+      href="http://image-net.herokuapp.com/img/small_logo.png">
+
+<!-- styles-->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="img/main_small_logo.png" height="100" width="100">
+          <a class="navbar-brand" href="index.html"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html"><img src="img/logo_small.png" height="70" width="70"> ImageNet</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section1 img-responsive">
+      <br><br><br><br><br>
+      <center>
+        <strong><h3><font color="#0056e7"><u>Make Your Own Database</u></font></h3></strong><br><br>
+        <strong><font color="#ff0000">Image Category: </font></strong><input type="text" name="query" placeholder="apple,tree,car..." required><br><br>
+        <font color="#ff0000">Height: </font><input type="text" name="height" value="224">
+         &nbsp;&nbsp;&nbsp;
+         <font color="#ff0000">Width: </font><input type="text" name="width" value="224"><br><br>
+
+         <font size="5" color="#00ff00">Sample Images</font><br>
+
+        <img src="img/logo_small.png" height="224" width="224"/>&nbsp;
+        <img src="img/main_small_logo.png" height="224" width="224" /><br><br>
+        <button>Download database</button>
+
+      </center>
+    </div>
+    <div class="section2">
+      <div class="row" style="margin-right:0px;">
+        <div class="col-sm-3" style="margin-right:0px;">
+          <div class="panel panel-default">
+            <div class="panel-heading panel-custom">
+              Latest News
+            </div>
+            <div class="panel-body">
+              Contents
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">Cover story with imgs and txt</div>
+          <div class="row" style="margin:0px;">
+            <div class="col-sm-6">
+              <div class= "well well-sm">Other Stories</div>
+            </div>
+            <div class="col-sm-6">
+              <div class= "well well-sm">Other stories</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">Disussion forum - (write post, user and time info, like,comment)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="container">
+        <div class="row">
+          <h4>Official Facebook Page</h4>
+          <a href="https://www.facebook.com/vasa.develop/"><i class="fa fa-5x fa-facebook-square"></i></a>
+          <p>© 2017. All Rights Reserved<br>VASA</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script type="js/suggestions.js"></script>
+
+  </body>

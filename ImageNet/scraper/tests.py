@@ -21,6 +21,7 @@ def download(soup):
 		if(lock == True):
 			get_image(a['src'])
 
+
 class scrape():
     def __init__(self):
         threading.Thread.__init__(self)
