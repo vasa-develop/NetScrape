@@ -7,19 +7,23 @@ from bs4 import BeautifulSoup
 import os
 import threading
 import requests
+import urllib.request
+import random
 
 global lock
 
 def get_image(link):
-	lock = False
-	os.system("wget "+link)
-	lock = True
+    lock = False
+    name = random.randrange(1, 1000)
+    full_name = str(name) + ".jpeg"
+    urllib.request.urlretrieve(link, full_name)
+    lock = True
 
 def download(soup):
-	lock = True
-	for a in soup.findAll('img'):
-		if(lock == True):
-			get_image(a['src'])
+    lock = True
+    for a in soup.findAll('img'):
+        if(lock == True):
+            get_image(a['src'])
 
 
 class scrape():
