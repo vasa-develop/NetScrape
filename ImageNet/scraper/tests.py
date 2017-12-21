@@ -36,7 +36,7 @@ class scrape():
 query = input("Image item: ")
 
 
-for i in range(0, 101, 20):
+for i in range(0, 201, 20):
     url = "http://images.google.com/search?q=" + query + "&sout=1&tbm=isch&ei=cpQuWtrOKcnMvgSNtbzICA&start=" + str(
         i) + "&sa=N"
 
