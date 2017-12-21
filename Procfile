@@ -1,1 +1,1 @@
-web: gunicorn {{ ImageNet }}.wsgi
+web: gunicorn  ImageNet.wsgi
