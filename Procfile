@@ -1,1 +1,1 @@
-web: gunicorn  NetScrape
+web: gunicorn ImageNet.wsgi
