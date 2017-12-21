@@ -1,4 +1,0 @@
-django
-bs4
-requests
-gunicorn
