@@ -1,1 +1,1 @@
-web: gunicorn ImageNet
+web: gunicorn NetScrape
